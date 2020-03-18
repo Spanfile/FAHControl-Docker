@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+    fahcontrol:
+        build: ./
+        environment:
+            - DISPLAY
+        volumes:
+            - /tmp/.X11-unix:/tmp/.X11-unix
+            - ./FAHClient:/home/fah/.FAHClient
