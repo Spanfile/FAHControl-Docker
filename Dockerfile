@@ -1,8 +1,8 @@
 FROM ubuntu:18.04
 
-ADD https://download.foldingathome.org/releases/public/release/fahcontrol/debian-stable-64bit/v7.5/fahcontrol_7.5.1-1_all.deb ./
-ADD https://download.foldingathome.org/releases/public/release/fahviewer/debian-stable-64bit/v7.5/fahviewer_7.5.1_amd64.deb ./
-RUN apt update && apt install python python-gnome2 dh-python ./fahcontrol_7.5.1-1_all.deb ./fahviewer_7.5.1_amd64.deb -y
+ADD https://download.foldingathome.org/releases/public/release/fahcontrol/debian-stable-64bit/v7.6/latest.deb ./fahcontrol.deb
+ADD https://download.foldingathome.org/releases/public/release/fahviewer/debian-stable-64bit/v7.6/latest.deb ./fahviewer.deb
+RUN apt update && apt install python python-gnome2 dh-python ./fahcontrol.deb ./fahviewer.deb -y
 
 RUN export uid=1000 gid=1000 && \
     mkdir -p /home/fah && \
